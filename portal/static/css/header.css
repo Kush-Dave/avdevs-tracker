@@ -1,0 +1,21 @@
+/*for header tag*/
+
+/* .sidebarhead
+{
+  z-index: 1;
+  position: fixed;
+  background: white;
+  padding: 20px;
+  width: calc(100% - 0%);
+  top: 0;
+  height: 30px;
+} */
+
+/*for AVA DEVS logo*/
+.logo img
+{
+  margin-top: -6px;
+  margin-left: 48px;
+  padding-top: 4px;
+  height: 40px;
+}

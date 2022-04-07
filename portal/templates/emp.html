@@ -1,0 +1,23 @@
+{% extends 'sidebarbase.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/hrhomepage.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+{% for person in emp %}
+    <div class="cards">
+        <div class="image">
+            <img src="{% static 'imgs/face.jpg' %}" alt="">
+        </div>
+        <div class="title">
+            <p>{{person.emp_name}}</p>
+        </div>
+        <div class="des">
+            <p>{{person.emp_id}}</p>
+            <a href="#"><button>Read More...</button></a>
+        </div>
+    </div>
+{% endfor %}
+{% endblock content %}

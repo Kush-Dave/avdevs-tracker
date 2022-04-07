@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock head %}
+
+{% block title %}AV DEVS login page{% endblock title %}
+
+{% block body %}
+
+{% block header %}{% endblock header %}
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endfor %}
+{% endif %}
+
+<div class="loginbody">
+    <div class="box">
+    
+    <form method="post">
+        {% csrf_token %}
+        <h1>Employee Log-In Area</h1> 
+     
+        <label for="email1">Email address:</label>
+        <input type="email"placeholder="Enter Email address" name="email1" id="email1"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+        <br>
+    
+        <label for="password1">Password:</label>
+        <input type="password"placeholder="Enter password" name="password1" id="password1" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required>
+        <br>
+        <p><input type="checkbox"required>Allow Me</p>
+        <a href="#"> Forgot password?</a><br><br>
+        <a href="register"> Register New Account.</a>
+        <br>
+        <br>
+        <input type="submit" class="submitbtn">
+
+    </form>
+
+    </div>
+    <script src="login.js"></script>
+{% endblock body %}

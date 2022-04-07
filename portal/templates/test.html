@@ -1,0 +1,57 @@
+{% extends 'sidebarbase.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/hrhomepage.css' %}">
+{% endblock head %}
+    
+{% block sidebarextra %}
+<a href="#" ><i class="fas fa-desktop"></i><span> All Employees </span></a>
+{% endblock sidebarextra %}
+
+{% block content %}
+<form action="{% url 'test' %}" method="POST">
+  {% csrf_token %}
+  {% comment %} <div class="pro">
+    <select name="project" required>
+      <option disabled selected hidden>Select Project Name...</option>
+      {% for project_na in project_search %}
+        <option value="{{project_na}}" name='project_na'>{{project_na}}</option>
+      {% endfor %}
+    </select>&nbsp;
+    
+  </div>
+  <button type="submit">Submit</button> {% endcomment %}
+</form>
+<br><br><br>
+
+{% comment %} <div class="cont">
+
+</div> {% endcomment %}
+
+<h1>{{data}}</h1>
+
+
+
+{% for person in projectt %}
+  <div class="cards">
+      <div class="image">
+          <img src="{% static 'image/face.jpg' %}" alt="">
+      </div>
+      <div class="title">
+          <p>{{person.first_name}}{{person.last_name}}</p>
+      </div>
+      <div class="des">
+          <p>{{person.emp_id}}</p>
+          <a href="#"><button>Read More...</button></a>
+      </div>
+  </div>
+{% endfor %}
+{% endblock content %}
+
+{% block body %}
+<script src = "{% static 'js/cards.js' %}"> </script>
+{% endblock body %}
+
+
+
+

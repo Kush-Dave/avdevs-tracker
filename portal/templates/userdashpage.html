@@ -1,0 +1,32 @@
+{% extends "sidebarbase.html" %}
+{% load static %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/userhomepage.css' %}">{% endblock head %}
+
+{% block title %}client home page{% endblock title %} 
+
+{% block sidebarextra %}
+<section class='sidbar'>
+  <a href="#"><i class="fas fa-table"></i><span> Tables </span></a>
+        <div class="line" id="hide">
+            <h3>ON / OFF</h3 id="hide">
+            <label class="switch" onclick="startStop()" >
+              <input type="checkbox" >
+              <span class="slider round"  onclick="settimer();hideb()" id="tog-btn"></span>
+            </label>
+        </div>
+        <div class="line" id="open" style="display:none">
+            <h3>PAUSE/ RESUME</h3>
+            <label class="switch" onclick="pauseResume()">
+                <input type="checkbox">
+                <span class="slider round" onclick="settimer();hidebtn()" id="tog-btn"></span>
+            </label>
+        </div>
+        <div id="display">
+          00:00:00
+        </div>
+        <div class="buttons" hidden>
+          <button id="startStop" onclick="startStop()">Start</button> <button id="reset" onclick="reset()">Reset</button>
+        </div>
+      </div>
+</section>
+{% endblock sidebarextra %}

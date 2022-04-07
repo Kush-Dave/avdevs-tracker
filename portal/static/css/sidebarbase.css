@@ -1,0 +1,229 @@
+/*header starts here */
+.sidebarbody
+{
+  color: white;
+  margin: 0;
+  margin-right: 25px;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*for header tag*/
+.sidebarhead
+{
+  z-index: 1;
+  position: fixed;
+  padding: 20px;
+  width: calc(100% - 0%);
+  top: 0px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*for AVA DEVS logo*/
+.logo img
+{
+  margin-top: -8px;
+  margin-left: 48px;
+  margin-bottom: 15px;
+  padding-top: 4px;
+  height: 40px;
+  
+}
+
+/* For Right side's logout button */
+.logout_btn
+{
+  padding: 5px;
+  background: #3498DB;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
+}
+/*button is hovering by mouse motion*/
+.logout_btn:hover
+{
+  background: #0B87A6;
+}
+/*sidebar starts here*/
+.sidebar
+{
+  z-index: 1;
+  top: 0;
+  background: #2f323a;
+  margin-top: 70px;
+  padding-top: 7px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 8%);
+  transition: 0.5s;
+  transition-property: left;
+  overflow-y: auto;
+}
+/*for profile image*/
+.profile_image
+{
+  padding:10px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* for username */
+.uname
+{
+  color: white;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+/*for dashboard and table*/
+.sidebar a
+{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 35px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+.sidebar a:hover
+{
+  background: #19B3D3; /*skyblue theme color*/
+}
+ 
+/* .sidebar a:active{
+  color: white;
+}  */
+/* for icon*/
+.sidebar i
+{
+  padding-right: 10px;
+  padding: 10px;
+}
+/* for sidebar button*/
+#sidebar_btn
+{
+  z-index: 1;
+  color: black; 
+  position: fixed;
+  cursor: pointer;
+  left: 25px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+/*for hover effect*/
+#sidebar_btn:hover
+{
+  color: #19B3D3;
+}
+/*To move sidebar , here check id is use for hide checkbox button*/
+#check{  
+  height:150px;
+}
+#check:checked ~ .sidebar
+{
+  left: -200px;
+}
+  
+#check:checked ~ .sidebar a span
+{
+  display: none;
+}
+  
+#check:checked ~ .sidebar a
+{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+/*to draw line between and for center position of two toggle  */  
+.line
+{
+  border-bottom: 1px solid white;
+  font-size: 10px; 
+  text-align: center;
+   height: 75px; 
+   width: 100%; 
+}
+/*For two toggle button*/
+.switch 
+{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/*for two toggle button design*/
+.slider 
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before 
+{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider 
+{
+  background-color: #21f34f;
+  box-shadow: 0 0 1px #21f34f;
+}
+input:checked + .slider:before 
+{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/*to make toggle button round from outside and inside too*/
+.slider.round 
+{
+  border-radius: 70px;
+}
+.slider.round:before 
+{
+  border-radius: 50%;
+}
+/*to print timer*/
+#display
+{
+    padding-top: 16px;
+    color: #ffffff;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.midel{
+  text-align: center;
+  margin: 80px;
+}

@@ -1,0 +1,52 @@
+{% extends 'sidebarbase.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/hrhomepage.css' %}">
+{% endblock head %}
+    
+{% block sidebarextra %}
+<a href="#" ><i class="fas fa-users"></i><span> All Employees </span></a>
+{% endblock sidebarextra %}
+
+{% block content %}
+<div class="project">
+    <select id="sel" required>
+        <option disabled selected hidden>Select Project Name...</option>
+        <option value = "{{empd.0}}" id="roadh" name="roadh">roadhow</option>
+        <option value = "{{empd.1}}" id="avtra" name="avtra">avtracker</option>
+        <option value = "{{empd.2}}" id="clara" name="clara">clara</option>
+        <option value = "{{empd.3}}" id="stree" name="stree">streetai</option>
+        <option value = "{{empd.4}}" id="ninet" name="ninet">9tofive</option>
+    </select>
+    <input type=submit value=submit>
+</div>
+<br><br><br>
+
+{% comment %} <div class="cont">
+    
+</div> {% endcomment %}
+{% comment %} <h1>{{emp_count}}</h1> {% endcomment %}
+
+{% for person in empd %}
+    <div class="cards">
+        <div class="image">
+            <img src="{% static 'image/face.jpg' %}" alt="">
+        </div>
+        <div class="title">
+            <p>{{person.first_name}} {{person.last_name}}</p>
+        </div>
+        <div class="des">
+            <p>{{person.emp_id}}</p>
+            <a href="#"><button>Read More...</button></a>
+        </div>
+    </div>
+{% endfor %}
+{% endblock content %}
+
+{% block body %}
+<script src = '{% static 'js/cards.js' %}'> </script>
+{% endblock body %}
+
+
+
+

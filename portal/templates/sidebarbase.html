@@ -1,0 +1,59 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel='stylesheet' href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/sidebarbase.css' %}">
+    {% block head %}{% endblock head %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+  <div class="sidebarbody" >
+  {% comment %} <div class="sidebarbody"> {% endcomment %}
+    <input type="checkbox" id='check'>
+    
+    <div class="sidebarhead">
+      <div class="same">
+        <label for="check">
+          <i class = "fas fa-bars" id = "sidebar_btn"> </i>
+        </label>
+        <div class="logo">
+          <img src="{% static 'image/logo.jpg' %}" alt="">
+        </div>
+      </div>
+     
+      <div class = "right_area">
+        <a href ='#' class = 'logout_btn'> Logout </a>
+      </div>
+    </div>
+    <!--side-bar starts here-->
+    <div class = "sidebar">
+      <div class = "profile">
+        <img src="{% static 'image/face.jpg' %}" class = "profile_image" alt="">
+        <h4 class="uname"> Employee ID:</h4>
+        <h4 class="uname"> Employee Name:</h4>
+      </div>    
+      <a href="#" ><i class="fas fa-desktop"></i><span> Dashboard </span></a>
+      {% block sidebarextra %}{% endblock sidebarextra %}
+      <script src="{% static 'js/sidebar.js' %}"></script>
+    </div>
+    <!--side-bar ends here-->
+  </div>
+  <!--for bootstrao grid-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2" id="sticky-sidebar">
+      </div>
+      <div class="col-lg-10" id="main">
+        {% block content %}{% endblock content %}
+      </div>
+    </div>
+  </div>
+  
+    {% block body %} {% endblock body %}
+</body>
+</html>

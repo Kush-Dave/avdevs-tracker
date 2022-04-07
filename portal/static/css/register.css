@@ -1,0 +1,64 @@
+/*for background image*/
+.registerbody{
+  background-color: skyblue;
+  padding-left: 0px;
+  position: relative;
+  margin:0 auto;
+}
+/*for box design*/
+.cent
+{ 
+  background-color: white;
+  border: 3px solid black;
+  width: 450px;
+  height: 680px;
+  padding:53px;
+  margin: auto;
+  align-items: center;
+  position:relative;
+}
+/*to center registration form*/
+.center{
+    text-align: center;
+  }
+/*for first and last name design*/
+input[type="text"]
+{
+  width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+/* Full-width input fields */
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* for timezone list */
+.timezone{
+  height: 40px;
+}
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity:1;
+}
